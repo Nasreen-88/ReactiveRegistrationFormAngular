@@ -1,0 +1,117 @@
+<!-- <p>react-form works!</p> -->
+
+<!-- <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+    <div class="form-group">
+        <label for="text">Enetr name</label>
+        <input type="text" name="nm" formControlName="username"
+            placeholder="Enter name" required>
+       
+    </div>
+
+    <br><br>
+
+    <div class="form-group">
+        <label>Enter Email</label>
+        <input type="text" name="email" formControlName="useremail"
+            placeholder="Enter email" required>
+        
+    </div>
+    <br><br>
+
+    <div class="form-group">
+        <label>Enter password</label>
+        <input type="password" name="ps" formControlName="userpassword"
+            placeholder="Enter password" required>
+       
+    </div>    
+
+        <br><br>
+
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" name="psc"
+                formControlName="userpasswordConfirm"
+                placeholder="Confirm Password" required>
+           
+        </div>
+        <br><br>
+
+        <button type="submit">Register</button>
+
+  
+    </form> -->
+
+    <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+        <div class="form-group">
+          <label for="text">Enter name</label>
+          <input type="text" name="nm" formControlName="username" placeholder="Enter name"
+            [ngClass]="{'is-invalid': submitted && registerForm.get('username')?.errors?.['required'] && registerForm.get('username')?.errors?.['minlength']}">
+          <div *ngIf="submitted && registerForm.get('username')?.errors?.['required']" class="invalid-feedback">
+            Name is required
+          </div>
+          <div *ngIf="submitted && registerForm.get('username')?.errors?.['minlength']" class="invalid-feedback">
+            Name must have more than 3 letters
+          </div>
+        </div>
+      
+        <br><br>
+      
+        <div class="form-group">
+          <label>Enter Email</label>
+          <input type="text" name="email" formControlName="useremail" placeholder="Enter email"
+            [ngClass]="{'is-invalid': submitted && registerForm.get('useremail')?.errors?.['required']}">
+          <div *ngIf="submitted && registerForm.get('useremail')?.errors?.['required']" class="invalid-feedback">
+            Email is required
+          </div>
+
+          <div *ngIf="submitted && registerForm.get('useremail')?.errors?.['pattern']" class="invalid-feedback">
+            Enter valid Email.
+          </div>
+        </div>
+      
+        <br><br>
+      
+        <div class="form-group">
+          <label>Enter password</label>
+          <input type="password" name="ps" formControlName="userpassword" placeholder="Enter password"
+            [ngClass]="{'is-invalid': submitted && registerForm.get('userpassword')?.errors?.['required']}">
+          <div *ngIf="submitted && registerForm.get('userpassword')?.errors?.['required'] " class="invalid-feedback">
+            Password is required
+          </div>
+          <div *ngIf="submitted && registerForm.get('username')?.errors?.['minlength']" class="invalid-feedback">
+            Password must have more than 6 characters
+          </div>
+
+          
+
+        </div>
+      
+        <br><br>
+      
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="password" name="psc" formControlName="userpasswordConfirm" placeholder="Confirm Password"
+            [ngClass]="{'is-invalid': submitted && registerForm.get('userpasswordConfirm')?.errors?.['required']}">
+          <div *ngIf="submitted && registerForm.get('userpasswordConfirm')?.errors?.['required']" class="invalid-feedback">
+            Confirm Password is required
+          </div>
+
+          <div *ngIf="submitted && registerForm.hasError('passwordMismatch')" class="invalid-feedback">
+            Password and Confirm Password do not match
+          </div>
+
+          
+        </div>
+      
+        <br><br>
+      
+        <button type="submit">Register</button>
+      </form>
+      
+
+    <div *ngIf="submitted && registerForm.valid">
+        <label for>name is : {{registerForm.value.username}}</label> <br>
+        <label for>Email is : {{registerForm.value.useremail}}</label> <br>
+        <label for>Password is : {{registerForm.value.userpassword}}</label> <br>
+
+    </div>

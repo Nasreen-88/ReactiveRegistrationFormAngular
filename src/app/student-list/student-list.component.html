@@ -1,0 +1,20 @@
+<!-- <form [formGroup]="filterForm">
+    <input type="text" formControlName="filter" placeholder="Filter students">
+  </form>
+  
+  <ul>
+    <li *ngFor="let name of studentNames | studentFilter: filterForm.controls.filter.value">
+      {{ name }}
+    </li>
+  </ul> -->
+  
+  <form [formGroup]="filterForm">
+    <input type="text" formControlName="filter" placeholder="Filter students">
+  </form>
+  
+  <ul>
+    <li *ngFor="let name of studentNames | studentFilter: filterForm?.get('filter')?.value">
+      {{ name }}
+    </li>
+  </ul>
+  

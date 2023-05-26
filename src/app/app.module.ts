@@ -21,6 +21,7 @@ import { ExampleComponent } from './reactive-form-validation/reactive-form-valid
 import { TemplateFormComponent } from './template-driven-form/template-driven-form.component';
 import { FormArrayComponent } from './form-array/form-array.component';
 import { ReactFormComponent } from './react-form/react-form.component';
+import { NestedformArrayComponent } from './nestedform-array/nestedform-array.component';
 
 
 
@@ -40,7 +41,8 @@ import { ReactFormComponent } from './react-form/react-form.component';
     TemplateFormComponent,
     ExampleComponent,
     FormArrayComponent,
-    ReactFormComponent
+    ReactFormComponent,
+    NestedformArrayComponent
     
   ],
   imports: [
