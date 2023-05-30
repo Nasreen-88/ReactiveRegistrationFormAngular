@@ -1,0 +1,84 @@
+<!-- <h1>ng-select Examples</h1>-->
+<!-- <div>
+    // Dropdown Select
+    <ng-select [items]="cars" placeholder="Select an option"></ng-select>
+</div>  -->
+<!--
+<br><br><br><br><br><br><br>
+
+    //Multiple Select 
+<div> 
+    <ng-select [items]="multipleOptions" placeholder="Select multiple options" [multiple]="true"></ng-select>
+</div>
+
+<br><br><br><br><br><br><br>
+
+    // Searchable Dropdown 
+  <div>  
+    <ng-select [items]="searchableOptions" placeholder="Search and select an option" [searchable]="true"></ng-select>
+</div>    -->
+
+
+
+
+
+<!-- Reactive form -->
+
+
+
+
+
+
+<!-- 
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label for="dropdown">Dropdown:</label>
+    <ng-select formControlName="dropdown" >
+      <ng-option *ngFor="let option of cars" [value]="option.id">{{ option.name }}</ng-option>
+    </ng-select> -->
+
+<!-- OR -->
+
+    <!-- <ng-select [items]="cars" 
+           bindLabel="name" 
+           bindValue="id" 
+           >
+</ng-select>
+   -->
+    <!-- <label for="multipleOptions">Multiple Options:</label>
+    <ng-select formControlName="multipleOptions" id="multipleOptions" [multiple]="true">
+      <ng-option *ngFor="let option of options" [value]="option.id">{{ option.name }}</ng-option>
+    </ng-select>
+  
+    <label for="searchable">Searchable:</label>
+    <ng-select formControlName="searchable" id="searchable" [searchable]="true">
+      <ng-option *ngFor="let option of options" [value]="option.id">{{ option.name }}</ng-option>
+    </ng-select> -->
+  
+    <!-- <button type="submit">Submit</button>
+  </form>
+   -->
+
+
+   <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+    <label for="dropdown">Dropdown:</label>
+    <ng-select formControlName="dropdown" id="dropdown" [items]="cars" bindLabel="name" dropdownPosition="top"></ng-select>
+</div>
+<br><br><br><br><br><br><br>
+
+<div>
+    <label for="multipleOptions">Multiple Options:</label>
+    <ng-select formControlName="multipleOptions" id="multipleOptions" [items]="cars" bindLabel="name" [multiple]="true"></ng-select>
+</div>
+<br><br><br><br><br><br><br>
+
+<div>
+    <label for="searchable">Searchable:</label>
+    <ng-select formControlName="searchable" id="searchable" [items]="cars" bindLabel="name" [searchable]="true"></ng-select>
+</div>
+<br><br><br><br><br><br><br>
+
+<div> 
+    <button type="submit">Submit</button>
+</div> 
+</form>
