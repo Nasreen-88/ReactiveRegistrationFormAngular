@@ -1,6 +1,4 @@
 
- 
-
 
 <!-- <router-outlet></router-outlet> -->
 <!-- directive -->
@@ -12,9 +10,8 @@
 <app-child1></app-child1>
 <app-child2></app-child2> -->
 
+<!-- This code is for directive -->
 
-    <!-- This code is for directive -->
-    
 <!--     
     <div>
     <label for="">Enter number</label>
@@ -22,10 +19,12 @@
     <input type="text" appNumberOnly>
 </div> -->
 
+<!-- built in pipe -->
+<!-- <app-builtin-pipe></app-builtin-pipe> -->
 
-    <!-- this code is for filter pipe -->
+<!-- this code is for filter pipe -->
 
-        <!-- <app-student-list></app-student-list> -->
+<!-- <app-student-list></app-student-list> -->
 
 <!-- This is for parent child communication -->
 
@@ -46,71 +45,135 @@
   </div> -->
 
 <!-- for form array -->
-  <!-- <app-form-array-example></app-form-array-example> -->
+<!-- <app-form-array-example></app-form-array-example> -->
 
-  <!-- for reactForm registration -->
+<!-- for reactForm registration -->
 
-  <!-- <app-react-form>/</app-react-form> -->
-  <!-- <app-react-form></app-react-form> -->
+<!-- <app-react-form></app-react-form> -->
+<!-- <app-react-form>/</app-react-form> -->
 
-  <!-- Routing -->
-<!-- 
+<!-- Routing -->
 
-
-
-
-This <nav> tag is for angular routing
-
+<!-- This <nav> tag is for angular routing -->
 
 
   <nav class="navbar navbar-expand-lg bg-light navbar-light">
     <div class="container-fluid">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" routerLink="">child1</a>
+          <a class="nav-link active" routerLink="/home">Home</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link active" routerLink="/child1">child1</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">child2</a>
-        </li>
+          <a class="nav-link" routerLink="/child2">child2</a>
+        </li> -->
+
         <li class="nav-item">
-          <a class="nav-link" (click)="navigatetoStud()">Directive</a>
+          <a class="nav-link" routerLink="/directives">Built-in Directives</a>
         </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="/custom-directives">Custom Directives</a>
+        </li> -->
+        
         <li class="nav-item">
-          <a class="nav-link" routerLink="contact">Form Array</a>
+          <a class="nav-link" routerLink="/Form-array">Form Array</a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" routerLink="contact">Parent to Child</a>
+            <a class="nav-link" routerLink="/parent">Parent to Child</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" routerLink="contact">Registration form</a>
+            <a class="nav-link" routerLink="/react-form">Registration form</a>
           </li>
 
           <li class="nav-item">
 
-            <a class="nav-link" routerLink="contact">Service</a>
+            <a class="nav-link" routerLink="/built-in-pipe">Built-in Pipe</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" routerLink="contact">Filter Pipe</a>
+            <a class="nav-link" routerLink="/filter-student-pipe">Filter Pipe</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" routerLink="contact">Template Form</a>
+            <a class="nav-link" routerLink="/accordion">Accordion</a>
           </li>
 
-        <li class="nav-item">
-          //<a class="nav-link" routerLink="**">Error Page</a>
-        </li>
-      </ul>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/buttons">ngButton</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/datepicker">ngDatePicker</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/alert">Alert</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/toolTip">Tool tip</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/ng-select">ng-select</a>
+          </li>
+         </ul>
     </div>
   </nav>
-  
-  
+  <router-outlet></router-outlet>
+
+<!-- 
   <div class="container">
     <router-outlet></router-outlet>
   </div> -->
 
-  <!-- For nested form array -->
-  <app-nestedform-array> </app-nestedform-array>
+<!-- For nested form array -->
+<!-- <app-nestedform-array> </app-nestedform-array> -->
+
+<!-- 1. Accordion component -->
+
+<!-- <div>
+  <h1>My App</h1>
+  <app-accordion></app-accordion>
+</div> -->
+
+<!-- 2. Alert component -->
+
+<!-- <div class="container">
+  <ngx-alert alertType="alert-success">
+     This is a success message!
+  </ngx-alert>
+
+  <ngx-alert alertType="alert-info">
+    This is an info message!
+  </ngx-alert>
+
+  <ngx-alert alertType="alert-warning">
+    This is a warning message!
+  </ngx-alert>
+
+  <ngx-alert alertType="alert-danger">
+    This is an error message!
+  </ngx-alert>
+</div> -->
+
+<!-- 3. carousel component -->
+<!-- <Carousel><Carousel> -->
+<!-- <app-ngx-carousel></app-ngx-carousel> -->
+
+<!-- 4. Buttons component -->
+<!-- <app-accordion></app-accordion> -->
+
+<!-- For datePicker -->
+<!-- <ngx-alert></ngx-alert> -->
+
+<!-- For ng select library -->
+<!-- <app-ng-select-comp> </app-ng-select-comp> -->
+
+<!-- for Tooltip -->
+
+<!-- <app-ngx-tooltip></app-ngx-tooltip> -->
+
+<!-- font awesome -->
+<!-- <app-font-awesome></app-font-awesome> -->
