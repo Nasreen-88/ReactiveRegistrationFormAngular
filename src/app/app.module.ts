@@ -22,11 +22,11 @@ import { ReactFormComponent } from './react-form/react-form.component';
 import { NestedformArrayComponent } from './nestedform-array/nestedform-array.component';
 
 
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BsDropdownConfig, BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BsDatepickerModule , BsDatepickerConfig} from 'ngx-bootstrap/datepicker';
 
 
 import { AlertComponent } from './alert/alert.component';
@@ -47,6 +47,22 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NgSelectButtonsComponent } from './ng-select-buttons/ng-select-buttons.component';
 import { NgSelectDatePickerComponent } from './ng-select-date-picker/ng-select-date-picker.component';
+import { NgxModalComponent } from './ngx-modal/ngx-modal.component';
+
+import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
+import { NgxtimePickerComponent } from './ngxtime-picker/ngxtime-picker.component';
+import { NgxPopOverComponent } from './ngx-pop-over/ngx-pop-over.component';
+import { NgxPaginationComponent } from './ngx-pagination/ngx-pagination.component';
+import { TimepickerModule } from 'ngx-bootstrap/timepicker';
+import { PaginationModule,PaginationConfig } from 'ngx-bootstrap/pagination';
+import { PopoverModule, PopoverConfig } from 'ngx-bootstrap/popover';
+import { NgxRatingComponent } from './ngx-rating/ngx-rating.component';
+import { RatingModule, RatingConfig } from 'ngx-bootstrap/rating';
+
+
+
+
+
 
 
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -83,6 +99,12 @@ import { NgSelectDatePickerComponent } from './ng-select-date-picker/ng-select-d
     PageNotFoundComponent,
     NgSelectButtonsComponent,
     NgSelectDatePickerComponent,
+    NgxModalComponent,
+    NgxtimePickerComponent,
+    NgxPopOverComponent,
+    NgxPaginationComponent,
+    NgxRatingComponent,
+   
     
     
   ],
@@ -99,10 +121,16 @@ import { NgSelectDatePickerComponent } from './ng-select-date-picker/ng-select-d
     CommonModule,
     NgSelectModule,
     TooltipModule,
-    
+    ModalModule,
+    TimepickerModule.forRoot(),
+    PaginationModule,
+    PopoverModule,
+    RatingModule,
+
+
     
   ],
-  providers: [],
+  providers: [BsDatepickerConfig, BsDropdownConfig,BsModalService,PaginationConfig,RatingConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

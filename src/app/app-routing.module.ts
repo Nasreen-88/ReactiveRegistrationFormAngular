@@ -31,6 +31,11 @@ import { AccordionComponent } from 'ngx-bootstrap/accordion';
 import { AlertComponent } from './alert/alert.component';
 import { NgSelectDatePickerComponent } from './ng-select-date-picker/ng-select-date-picker.component';
 import { NgSelectButtonsComponent } from './ng-select-buttons/ng-select-buttons.component';
+import { NgxModalComponent } from './ngx-modal/ngx-modal.component';
+import { NgxtimePickerComponent } from './ngxtime-picker/ngxtime-picker.component';
+import { NgxPaginationComponent } from './ngx-pagination/ngx-pagination.component';
+import { NgxPopOverComponent } from './ngx-pop-over/ngx-pop-over.component';
+import { NgxRatingComponent } from './ngx-rating/ngx-rating.component';
 
 
 const routes: Routes = [
@@ -50,6 +55,14 @@ const routes: Routes = [
   {path:'toolTip', component: NgxTooltipComponent},
   {path:'buttons', component: NgSelectButtonsComponent},
   {path:'ng-select', component: NgSelectCompComponent},
+  {path:'ng-modal', component: NgxModalComponent},
+  {path:'ng-timePicker', component: NgxtimePickerComponent},
+  {path:'ng-pagination', component: NgxPaginationComponent},
+  {path:'ng-popOver', component: NgxPopOverComponent},
+  {path:'ng-rating', component: NgxRatingComponent},
+
+
+
 
   // {path:'', redirectTo: '/home'},
   {path:'', component: HomeComponent},

@@ -1,6 +1,32 @@
 
 <!-- for datepicker -->
 
-<div class="container">
+<!-- <div class="container">
     <input type="text" class="form-control" bsDatepicker [bsConfig]="datepickerConfig" (bsValueChange)="handleDateChange($event)">
-  </div>
+  </div> -->
+
+  <!-- for following code 1. added 2 links in index.html file 2. in app.module.ts file a new module BsDatepickerConfig added, 3.ts and html file updated -->
+
+  <div class="row">
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+       <input type="text"
+          placeholder="Datepicker"
+          class="form-control"
+          bsDatepicker
+          [bsValue]="bsValue"
+          [minDate]="minDate"
+          [maxDate]="maxDate"
+          [daysDisabled]="[6,0]"
+         
+          [bsConfig]="{ isAnimated: true, dateInputFormat: 'YYYY-MM-DD' }">
+    </div>
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+       <input type="text"
+          placeholder="Daterangepicker"
+          class="form-control"
+          bsDaterangepicker
+          [(ngModel)]="bsRangeValue"
+         
+          [bsConfig]="{ isAnimated: true }">
+    </div>
+ </div>

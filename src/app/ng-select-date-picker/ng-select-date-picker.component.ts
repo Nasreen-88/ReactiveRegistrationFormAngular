@@ -9,13 +9,33 @@ import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 })
 export class NgSelectDatePickerComponent {
 
-  datepickerConfig: Partial<BsDatepickerConfig>;
+  //datepickerConfig: Partial<BsDatepickerConfig>;
+
+
+  // colorTheme = 'theme-green';
+
+
+
+  // constructor() {
+  //   this.datepickerConfig = {
+  //     containerClass: 'colorTheme',
+  //     showWeekNumbers: false
+  //   };
+  // }
+
+  
+  bsValue = new Date();
+  bsRangeValue: Date[];
+  maxDate = new Date();
+  minDate = new Date();
 
   constructor() {
-    this.datepickerConfig = {
-      containerClass: 'theme-default',
-      showWeekNumbers: false
-    };
+     this.minDate.setDate(this.minDate.getDate() - 10);
+     this.maxDate.setDate(this.maxDate.getDate() + 10);
+     this.bsRangeValue = [this.bsValue, this.maxDate];
+  }
+
+  ngOnInit(): void {
   }
 
   handleDateChange(date: Date): void {
